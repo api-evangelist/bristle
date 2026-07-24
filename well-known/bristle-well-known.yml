@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of https://bristlehealth.com/.well-known/*
+host: https://bristlehealth.com
+note: >-
+  bristlehealth.com is a Shopify-hosted storefront. The openid-configuration and
+  oauth-authorization-server documents are served by Shopify's customer-account
+  authentication platform (issuer shopify.com/authentication/52775747741), not a
+  first-party Bristle API. Captured verbatim because they return 200 at the
+  company domain; scopes include Shopify's customer-account and
+  customer-account-mcp-api surfaces.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: bristle-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: bristle-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
